@@ -47,7 +47,7 @@
                                 </a>
                                 <div class="media-body">
                                     <div class="media-meta">
-                                        {{ $latest->created_at->formatLocalized('d F Y') }}
+                                        {{ $latest->created_at->formatLocalized('%d %B %Y') }}
                                     </div>
                                     <h4 class="media-heading"><a href="{{ $latest->url }}">{{ $latest->title }}</a></h4>
                                 </div>
@@ -67,7 +67,7 @@
                                 </a>
                                 <div class="media-body">
                                     <div class="media-meta">
-                                        {{ $latest->created_at->formatLocalized('d F Y') }}
+                                        {{ $latest->created_at->formatLocalized('%d %B %Y') }}
                                     </div>
                                     <h4 class="media-heading"><a href="{{ $latest->url }}">{{ $latest->title }}</a></h4>
                                 </div>

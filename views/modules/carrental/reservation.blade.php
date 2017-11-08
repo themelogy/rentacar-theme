@@ -24,7 +24,7 @@
                         <div class="row">
                             <div class="col-md-8">
                                 <div class="@if(count($car->images)>1) owl-carousel img-carousel @endif">
-                                    @foreach($car->present()->images(600,426,'fit',80,4) as $image)
+                                    @foreach($car->present()->images(600,null,'resize',80,4) as $image)
                                         <div class="item">
                                             <a class="btn btn-zoom" href="{{ $image }}" data-gal="prettyPhoto"><i class="fa fa-arrows-h"></i></a>
                                             <a href="{{ $image }}" data-gal="prettyPhoto"><img class="img-responsive" src="{{ $image }}" alt=""/></a>
@@ -52,7 +52,11 @@
                                         </ul>
                                     </div>
                                     <div class="price">
-                                        <strong>{{ $reservation->daily_price or $car->prices->price1 }}</strong> <span>TL / 1 Günlük</span><br/>
+										@if(isset($reservation->daily_price))
+                                        <strong>{{ $reservation->daily_price }}</strong> <span>TL / 1 Günlük</span><br/>
+										@else
+										<strong>{{ @$reservation->prices->price1 }}</strong> <span>TL / 1 Günlük</span><br/>	
+										@endif
 										@if(isset($reservation->total_day))
                                         Toplam {{ $reservation->total_day }} gün için {{ number_format($reservation->daily_price * $reservation->total_day, 2) }} TL
 										@endif

@@ -44,7 +44,7 @@
                                                             <div class="swiper-container" id="swiperSlider1x2">
                                                                 <div class="swiper-wrapper">
                                                                     <div class="swiper-slide">
-                                                                        <a href="{{ $car->present()->firstImage(600,426,'fit',80) }}" data-gal="prettyPhoto"><img class="img-responsive" src="{{ $car->present()->firstImage(600,426,'fit',80) }}" alt=""/></a>
+                                                                        <a href="{{ $car->present()->firstImage(600,null,'resize',80) }}" data-gal="prettyPhoto"><img class="img-responsive" src="{{ $car->present()->firstImage(600,null,'resize',80) }}" alt=""/></a>
                                                                     </div>
                                                                 </div>
                                                             </div>

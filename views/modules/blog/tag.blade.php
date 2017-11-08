@@ -32,7 +32,7 @@
                                 </div>
                                 <div class="post-header">
                                     <h2 class="post-title"><a href="{{ $post->url }}">{{ $post->title }}</a></h2>
-                                    <div class="post-meta"><a href="#">{{ $post->author->fullname }}</a> / {{ $post->created_at->formatLocalized('d F Y') }} / <a href="{{ $post->category->url }}">{{ $post->category->name }}</a></div>
+                                    <div class="post-meta"><a href="#">{{ $post->author->fullname }}</a> / {{ $post->created_at->formatLocalized('%d %B %Y') }} / <a href="{{ $post->category->url }}">{{ $post->category->name }}</a></div>
                                 </div>
                                 <div class="post-body">
                                     <div class="post-excerpt">

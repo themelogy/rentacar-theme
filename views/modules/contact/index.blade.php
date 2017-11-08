@@ -83,7 +83,7 @@
     <!-- /PAGE -->
 
     <section style="height: 300px;">
-        @gmap('300px', '16', 'img/marker.png')
+        @gmap('300px', '16', 'img/favicon.png')
     </section>
 
 @stop
