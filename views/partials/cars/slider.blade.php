@@ -1,4 +1,4 @@
-@if(Module::active('CarRental'))
+@if(Module::active('Carrental'))
 <?php $classes = CarClassRepository::all()->sortBy('ordering')->take(5) ?>
 <section class="page-section">
     <div class="container">
@@ -26,7 +26,7 @@
                     <div class="swiper-container">
 
                         <div class="swiper-wrapper">
-                            @foreach($class->cars()->with(['brand', 'model', 'series'])->whereAvailableStatus(\Modules\CarRental\Entities\Car\AvailableStatuses::READY)->whereStatus(\Modules\CarRental\Entities\Helpers\Status::PUBLISHED)->get()->take(6) as $car)
+                            @foreach($class->cars()->with(['brand', 'model', 'series'])->whereAvailableStatus(\Modules\Carrental\Entities\Car\AvailableStatuses::READY)->whereStatus(\Modules\Carrental\Entities\Helpers\Status::PUBLISHED)->get()->take(6) as $car)
                                 <div class="swiper-slide">
                                     <div class="thumbnail no-border no-padding thumbnail-car-card">
                                         <div class="media">

@@ -1,4 +1,4 @@
-@if(Module::active('CarRental'))
+@if(Module::active('Carrental'))
     @php $classes = CarClassRepository::all()->sortBy('ordering')->take(5) @endphp
     <section class="page-section">
         <div class="container">
@@ -18,7 +18,7 @@
             <div class="tab-content wow fadeInUp" data-wow-offset="70" data-wow-delay="500ms">
 
                 @foreach($classes as $class)
-                    @php $cars = $class->cars()->with(['brand', 'model', 'series'])->whereAvailableStatus(\Modules\CarRental\Entities\Car\AvailableStatuses::READY)->whereStatus(\Modules\CarRental\Entities\Helpers\Status::PUBLISHED)->get()->take(6) @endphp
+                    @php $cars = $class->cars()->with(['brand', 'model', 'series'])->whereAvailableStatus(\Modules\Carrental\Entities\Car\AvailableStatuses::READY)->whereStatus(\Modules\Carrental\Entities\Helpers\Status::PUBLISHED)->get()->take(6) @endphp
                     <div class="tab-pane fade @if($loop->iteration == 1) active in @endif" id="tab-cl{{ $loop->iteration }}">
                         <div class="car-big-card">
                             <div class="row">

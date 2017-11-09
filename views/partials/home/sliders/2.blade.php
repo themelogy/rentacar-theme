@@ -1,4 +1,4 @@
-@if(Module::active('CarRental'))
+@if(Module::active('Carrental'))
 <section class="page-section no-padding slider">
     <div class="container full-width">
 
