@@ -55,7 +55,7 @@
 										@if(isset($reservation->daily_price))
                                         <strong>{{ $reservation->daily_price }}</strong> <span>TL / 1 Günlük</span><br/>
 										@else
-										<strong>{{ @$reservation->prices->price1 }}</strong> <span>TL / 1 Günlük</span><br/>	
+										<strong>{{ $car->prices->price1 }}</strong> <span>TL / 1 Günlük</span><br/>	
 										@endif
 										@if(isset($reservation->total_day))
                                         Toplam {{ $reservation->total_day }} gün için {{ number_format($reservation->daily_price * $reservation->total_day, 2) }} TL

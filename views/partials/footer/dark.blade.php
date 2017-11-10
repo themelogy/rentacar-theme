@@ -34,7 +34,7 @@
                             <div class="widget widget-links">
                                 <h4>ANKARA ARAÇ KİRALAMA</h4>
                                 <ul>
-                                    @foreach(Blog::all()->take(10) as $post)
+                                    @foreach(Blog::latest(10) as $post)
                                         <li><a href="{{ $post->url }}">{{ $post->title }}</a></li>
                                     @endforeach
                                 </ul>

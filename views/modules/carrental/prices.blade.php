@@ -41,7 +41,7 @@
                         <td>{{ $car->prices->price4 }}</td>
                         <td>{{ $car->prices->price5 }}</td>
                         <td>{{ $car->prices->price6 }}</td>
-                        <td><a class="btn btn-default btn-sm" href="{{ url(route('carrental.reservation').'?id='.$car->id) }}">{{ trans('carrental::cars.button.reservation') }}</a></td>
+                        <td><a class="btn btn-default btn-sm" href="{{ url(route('carrental.reservation').'?car_id='.$car->id) }}">{{ trans('carrental::cars.button.reservation') }}</a></td>
                     </tr>
                     @endforeach
                     </tbody>

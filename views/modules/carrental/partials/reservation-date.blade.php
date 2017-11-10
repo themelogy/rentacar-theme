@@ -44,9 +44,9 @@
         $('#pick_at').datetimepicker({
             format: 'DD.MM.YYYY',
 			locale: '{{ locale() }}',
-            minDate: '{{ Carbon::today()->format('Y/m/d') }}',
+            minDate: '{{ isset($reservation->pick_at) ? $reservation->pick_at->format('Y/m/d') : Carbon::today()->format('Y/m/d') }}',
 			@if(isset($reservation->drop_at))
-			maxDate: '{{ $reservation->drop_at->isTomorrow() ? Carbon::today()->format('Y/m/d') : Carbon::parse($reservation->drop_at)->addDays(-1)->format('Y/m/d') }}'
+			maxDate: '{{ isset($reservation->drop_at) ? $reservation->drop_at->format('Y/m/d') : Carbon::today()->addDays(1)->format('Y/m/d') }}'
 			@endif
         });
         $('#drop_at').datetimepicker({

@@ -34,8 +34,8 @@
                             <div class="widget widget-links">
                                 <h4>Araç Kiralama</h4>
                                 <ul>
-                                    @foreach(Blog::all()->take(10) as $post)
-                                        <li><a href="{{ $post->url }}">{{ $post->title }}</a></li>
+                                    @foreach(Blog::latest(5) as $post)
+                                        <li><a href="{{ $post->url }}"><i class="fa fa-circle"></i> {{ $post->title }}</a></li>
                                     @endforeach
                                 </ul>
                             </div>
@@ -77,3 +77,14 @@
 </footer>
 
 <div id="to-top" class="to-top"><i class="fa fa-angle-up"></i></div>
+
+@push('css_inline')
+<style>
+.footer-dark .widget-links ul li {
+	margin-bottom: 5px !important;
+	line-height:16px !important;
+	list-style-type: circle;
+	list-style-position: outside;
+}
+</style>
+@endpush

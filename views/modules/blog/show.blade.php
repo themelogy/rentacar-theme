@@ -28,7 +28,7 @@
 
                             <article class="post-wrap">
                                 <div class="post-media">
-                                    <a href="{{ $post->present()->firstImage(870,370,'fit',80) }}" data-gal="prettyPhoto"><img src="{{ $post->present()->firstImage(870,370,'fit',80) }}" alt=""></a>
+                                    <a href="{{ $post->present()->firstImage(null,370,'resize',80) }}" data-gal="prettyPhoto"><img style="width:auto;height:250px;" src="{{ $post->present()->firstImage(null,370,'resize',80) }}" alt=""></a>
                                 </div>
                                 <div class="post-header">
                                     <h2 class="post-title"><a href="{{ $post->url }}">{{ $post->title }}</a></h2>
