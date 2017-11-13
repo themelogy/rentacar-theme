@@ -18,21 +18,25 @@
                 </div>
                 <div class="col-md-9">
                     <div class="row">
-                        <div class="col-md-3">
+						<div class="col-md-5">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="widget widget-links">
+										<h4>Kurumsal</h4>
+										{!! Menu::render('corporate', \Themes\Rentacar\Presenter\FooterMenuLinksPresenter::class) !!}
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="widget widget-links">
+										<h4>Kiralama Hizmetleri</h4>
+										{!! Menu::render('services', \Themes\Rentacar\Presenter\FooterMenuLinksPresenter::class) !!}
+									</div>
+								</div>
+							</div>
+						</div>
+                        <div class="col-md-4">
                             <div class="widget widget-links">
-                                <h4>Kurumsal</h4>
-                                {!! Menu::render('corporate', \Themes\Rentacar\Presenter\FooterMenuLinksPresenter::class) !!}
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="widget widget-links">
-                                <h4>Hizmetlerimiz</h4>
-                                {!! Menu::render('services', \Themes\Rentacar\Presenter\FooterMenuLinksPresenter::class) !!}
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="widget widget-links">
-                                <h4>Araç Kiralama</h4>
+                                <h4>Ankara Araç Kiralama</h4>
                                 {!! Menu::render('rental', \Themes\Rentacar\Presenter\FooterMenuLinksPresenter::class) !!}
                             </div>
                         </div>

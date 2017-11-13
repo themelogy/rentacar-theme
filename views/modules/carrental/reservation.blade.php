@@ -24,7 +24,7 @@
                         <div class="row">
                             <div class="col-md-8">
                                 <div class="@if(count($car->images)>1) owl-carousel img-carousel @endif">
-                                    @foreach($car->present()->images(600,null,'resize',80,4) as $image)
+                                    @foreach($car->present()->images(600,null,'resize',80,6) as $image)
                                         <div class="item">
                                             <a class="btn btn-zoom" href="{{ $image }}" data-gal="prettyPhoto"><i class="fa fa-arrows-h"></i></a>
                                             <a href="{{ $image }}" data-gal="prettyPhoto"><img class="img-responsive" src="{{ $image }}" alt=""/></a>
@@ -33,7 +33,7 @@
                                 </div>
                                 @if(count($car->images)>1)
                                     <div class="row car-thumbnails">
-                                        @foreach($car->present()->images(70,70,'fit',80,4) as $image)
+                                        @foreach($car->present()->images(70,70,'fit',80,6) as $image)
                                             <div class="col-xs-2 col-sm-2 col-md-{{ 12/$loop->count }}"><a href="#" onclick="jQuery('.img-carousel').trigger('to.owl.carousel', [{{ $loop->iteration-1 }},300]);"><img src="{{ $image }}" alt=""/></a></div>
                                         @endforeach
                                     </div>

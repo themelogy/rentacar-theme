@@ -2,6 +2,19 @@
 
 @section('content')
     @include('partials.home.sliders.2')
+		
+		@if($page = Page::findHomePage())
+	    <section class="page-section" style="padding:30px 0 0 0; text-align:justify;">
+        <div class="container">
+			<div class="row">
+				<div class="col-md-12">
+				<h1 class="text-center">ANKARA ARAÇ KİRALAMA</h1>
+				{!! $page->body !!}
+				</div>
+			</div>
+		</div>
+		</section>
+		@endif
 
     @include('partials.cars.tabs')
 
