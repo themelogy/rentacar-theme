@@ -29,17 +29,17 @@ elixir.extend('stylistPublish', function() {
 
 elixir(function (mix) {
 
-    // mix.sass('bootstrap.scss', cssPath + '/bootstrap.min.css')
-    //     .sass('theme/theme.scss', cssPath + '/theme.min.css');
+    mix.sass('bootstrap.scss', cssPath + '/bootstrap.min.css')
+        .sass('theme/theme.scss', cssPath + '/theme.min.css');
 
-   mix.del(['assets/css', 'assets/js']);
-   mix.del(themePath+'/**');
-
-   mix.sass('bootstrap.scss', 'resources/assets/css/bootstrap.min.css')
-        .sass('theme/theme.scss', 'resources/assets/css/theme.min.css');
-
-   mix.copy('resources/assets', 'assets');
-
-   mix.stylistPublish();
+   // mix.del(['assets/css', 'assets/js']);
+   // mix.del(themePath+'/**');
+   //
+   // mix.sass('bootstrap.scss', 'resources/assets/css/bootstrap.min.css')
+   //      .sass('theme/theme.scss', 'resources/assets/css/theme.min.css');
+   //
+   // mix.copy('resources/assets', 'assets');
+   //
+   // mix.stylistPublish();
 
 });

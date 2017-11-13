@@ -39,7 +39,7 @@
                 <!-- tab 1 -->
                 <div class="tab-pane fade" id="tab-s1">
                     <div class="recent-post">
-                        @foreach(Blog::latest(3) as $latest)
+                        @foreach(Blog::latest(5) as $latest)
                             <div class="media">
                                 <a class="pull-left media-link" href="#">
                                     <img class="media-object" src="{{ $latest->present()->firstImage(70,70,'fit',80) }}" alt="{{ $latest->title }}">
@@ -59,7 +59,7 @@
                 <!-- tab 2 -->
                 <div class="tab-pane fade in active" id="tab-s2">
                     <div class="recent-post">
-                        @foreach(Blog::latest(3) as $latest)
+                        @foreach(Blog::latest(5) as $latest)
                             <div class="media">
                                 <a class="pull-left media-link" href="#">
                                     <img class="media-object" src="{{ $latest->present()->firstImage(70,70,'fit',80) }}" alt="{{ $latest->title }}">
@@ -85,7 +85,7 @@
         <h4 class="widget-title"><span>ETİKETLER</span></h4>
         <ul>
             @if(Request::route()->getName() == 'blog.index' || Request::route()->getName() == 'blog.category' || Request::route()->getName() == 'blog.tag')
-                @foreach(Blog::latest(10) as $latest)
+                @foreach(Blog::latest(20) as $latest)
                     <?php $tag = $latest->tags()->first(); ?>
                     @if($tag)
                         <li><a href="{{ route('blog.tag', [$tag->slug]) }}">{{ $tag->name }}</a></li>

@@ -33,11 +33,7 @@
                         <div class="col-md-3">
                             <div class="widget widget-links">
                                 <h4>Araç Kiralama</h4>
-                                <ul>
-                                    @foreach(Blog::latest(5) as $post)
-                                        <li><a href="{{ $post->url }}"><i class="fa fa-circle"></i> {{ $post->title }}</a></li>
-                                    @endforeach
-                                </ul>
+                                {!! Menu::render('rental', \Themes\Rentacar\Presenter\FooterMenuLinksPresenter::class) !!}
                             </div>
                         </div>
                         <div class="col-md-3">
