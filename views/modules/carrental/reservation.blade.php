@@ -4,7 +4,7 @@
     <section class="page-section breadcrumbs text-right">
         <div class="container">
             <div class="page-header">
-                <h1>{{ trans('carrental::reservations.title.reservations') }}</h1>
+                <h1>{{ trans('themes::carrental.titles.car', ['car'=>$car->fullname]) }}</h1>
             </div>
             {!! Breadcrumbs::renderIfExists('carrental.reservation') !!}
         </div>
