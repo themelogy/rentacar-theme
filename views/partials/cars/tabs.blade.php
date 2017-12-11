@@ -1,5 +1,5 @@
 @if(Module::active('Carrental'))
-    @php $classes = CarClassRepository::all()->sortBy('ordering')->take(5) @endphp
+    @php $classes = CarClassRepository::all()->sortBy('ordering')->take(6) @endphp
     <section class="page-section">
         <div class="container">
 
